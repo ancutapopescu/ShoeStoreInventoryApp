@@ -1,0 +1,81 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="EmailTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_16sp</item>
+        <item name="android:layout_marginTop">@dimen/margin_16sp</item>
+        <item name="android:layout_marginEnd">@dimen/margin_16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="sizeTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_16sp</item>
+        <item name="android:layout_marginEnd">@dimen/margin_16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="editTextEmailAdress">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_16sp</item>
+        <item name="android:layout_marginEnd">@dimen/margin_16sp</item>
+        <item name="android:ems">10</item>
+    </style>
+
+    <style name="loginButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginStart">@dimen/margin_16sp</item>
+        <item name="android:layout_marginTop">@dimen/margin_16sp</item>
+        <item name="android:layout_marginEnd">@dimen/margin_16sp</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="whiteButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginStart">@dimen/margin_16sp</item>
+        <item name="android:layout_marginTop">@dimen/margin_16sp</item>
+        <item name="android:layout_marginEnd">@dimen/margin_16sp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="urgeStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginStart">@dimen/margin_16sp</item>
+        <item name="android:layout_marginTop">@dimen/margin_16sp</item>
+        <item name="android:layout_marginEnd">@dimen/margin_16sp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/margin_36sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

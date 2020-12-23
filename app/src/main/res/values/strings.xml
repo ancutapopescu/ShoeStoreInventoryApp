@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="toolbar_activity_main">Shoe Store App</string>
+    <string name="app_icon_image">App Icon Image</string>
+    <string name="EmailTextView">Email</string>
+    <string name="EmailEditText">Email</string>
+    <string name="EmailHint">Your Email</string>
+    <string name="PasswordTextView">Password</string>
+    <string name="PasswordEditText">Your Password</string>
+    <string name="loginButton">Login</string>
+    <string name="accountQuestion">Don\'t have an account?</string>
+    <string name="signupButton">Sign up</string>
+    <string name="app_icon_image_white">App Icon Image White</string>
+    <string name="sloganTextView">Good shoes \ntake you \ngood places.</string>
+    <string name="shoeTypesTextView">Women | Men | Kids</string>
+    <string name="instructions">
+Buy quality and affordable shoes and footwear online.
+        \nLarge selection of great footwear both leather, rubber, silicon and other materials.
+    </string>
+    <string name="urgeTextView">
+        Save Now with Exclusive Deals
+    </string>
+    <string name="exploreButton">Explore</string>
+    <string name="seeDealsButton">See Deals</string>
+    <string name="fabShoeListDescription">Add new show item</string>
+    <string name="shoeListTitle">Our collection</string>
+    <string name="logout_menu">Logout</string>
+    <string name="addShoe">Add a new Shoe</string>
+    <string name="nameShoe">Name</string>
+    <string name="companyShoe">Company</string>
+    <string name="sizeShoe">Size</string>
+    <string name="descriptionShoe">Description</string>
+    <string name="saveButton">Save</string>
+    <string name="itemName">SHOE NAME</string>
+    <string name="itemCompany">Company</string>
+    <string name="itemSize">Size</string>
+    <string name="itemDescription">Description</string>
+</resources>

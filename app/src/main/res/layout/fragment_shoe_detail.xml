@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="shoeViewModel"
+            type="com.udacity.shoestore.models.ShoeListViewModel" />
+    </data>
+
+    <!--I used ConstraintLayout, to align the two buttons-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/addShoeTextView"
+            style="@style/urgeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addShoe"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            style="@style/EmailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16sp"
+            android:layout_marginTop="@dimen/margin_36sp"
+            android:text="@string/nameShoe"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addShoeTextView" />
+
+        <EditText
+            android:id="@+id/nameEditText"
+            style="@style/editTextEmailAdress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="text"
+            android:singleLine="true"
+            android:ems="10"
+            android:text="@={shoeViewModel.shoeName}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+        <TextView
+            android:id="@+id/companyTextView"
+            style="@style/EmailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16sp"
+            android:layout_marginTop="@dimen/margin_36sp"
+            android:text="@string/companyShoe"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
+
+        <EditText
+            android:id="@+id/companyEditText"
+            style="@style/editTextEmailAdress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16sp"
+            android:layout_marginEnd="@dimen/margin_16sp"
+            android:ems="10"
+            android:autofillHints=""
+            android:inputType="text"
+            android:singleLine="true"
+            android:text="@={shoeViewModel.shoeCompany}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyTextView" />
+
+        <TextView
+            android:id="@+id/sizeTextView"
+            style="@style/EmailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16sp"
+            android:layout_marginTop="@dimen/margin_36sp"
+            android:text="@string/sizeShoe"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyEditText" />
+
+        <EditText
+            android:id="@+id/sizeEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16sp"
+            android:layout_marginEnd="@dimen/margin_16sp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="@={shoeViewModel.shoeSize}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sizeTextView" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            style="@style/EmailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16sp"
+            android:layout_marginTop="@dimen/margin_36sp"
+            android:layout_marginEnd="@dimen/margin_16sp"
+            android:text="@string/descriptionShoe"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sizeEditText" />
+
+        <EditText
+            android:id="@+id/descriptionEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16sp"
+            android:layout_marginEnd="@dimen/margin_16sp"
+            android:ems="10"
+            android:inputType="textImeMultiLine"
+            android:text="@={shoeViewModel.shoeDescription}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTextView" />
+
+        <Button
+            android:id="@+id/saveButton"
+            style="@style/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16sp"
+            android:text="@string/saveButton"
+            app:layout_constraintBaseline_toBaselineOf="@+id/cancelButton"
+            app:layout_constraintEnd_toStartOf="@+id/cancelButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            style="@style/whiteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16sp"
+            android:layout_marginEnd="@dimen/margin_16sp"
+            android:background="@color/colorAccentDark"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/saveButton"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionEditText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

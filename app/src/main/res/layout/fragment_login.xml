@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--I used LinearLayout, orientation vertical, to align all children in a single direction, vertically-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/app_icon_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/margin_16sp"
+            android:layout_marginTop="@dimen/margin_16sp"
+            android:layout_marginEnd="@dimen/margin_16sp"
+            android:contentDescription="@string/app_icon_image"
+            app:srcCompat="@drawable/shoe_app_icon" />
+
+        <TextView
+            android:id="@+id/emailTextView"
+            android:text="@string/EmailTextView"
+            style="@style/EmailTextView" />
+
+        <EditText
+            android:id="@+id/editTextEmailAddress"
+            android:autofillHints=""
+            android:hint="@string/EmailHint"
+            android:inputType="textEmailAddress"
+            style="@style/editTextEmailAdress" />
+
+        <TextView
+            android:id="@+id/passwordTextView"
+            style="@style/EmailTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PasswordTextView" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            style="@style/editTextEmailAdress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/PasswordEditText"
+            android:inputType="textPassword"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:text="@string/loginButton"
+            style="@style/loginButton" />
+
+        <TextView
+            android:id="@+id/accountTextView"
+            style="@style/EmailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_36sp"
+            android:text="@string/accountQuestion"
+            android:textColor="@color/colorAccentDark" />
+
+        <Button
+            android:id="@+id/signupButton"
+            style="@style/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signupButton" />
+
+    </LinearLayout>
+</layout>
