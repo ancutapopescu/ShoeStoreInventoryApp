@@ -37,4 +37,5 @@ Buy quality and affordable shoes and footwear online.
     <string name="itemCompany">Company</string>
     <string name="itemSize">Size</string>
     <string name="itemDescription">Description</string>
+    <string name="cancelButton">Cancel</string>
 </resources>

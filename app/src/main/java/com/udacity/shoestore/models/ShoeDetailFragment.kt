@@ -8,7 +8,11 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.observe
 import androidx.navigation.Navigation
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
@@ -36,9 +40,20 @@ class ShoeDetailFragment : Fragment() {
         binding.shoeViewModel = shoeListViewModel
         binding.lifecycleOwner = this
 
-        binding.cancelButton.setOnClickListener { view: View ->
-            Navigation.findNavController(view).navigate(R.id.action_shoeDetailFragment_to_shoeListFragment)
+        shoeListViewModel.shoeSaved.observe(viewLifecycleOwner) {   isShoeSaved ->
+/* When we have new data, we will navigate back using the navigateUp() method and since ViewModel is shared, the newly added data will be automatically observed and displayed.
+            */
+            if(isShoeSaved) {
+                findNavController().popBackStack()
+                shoeListViewModel.onShoeSaved()
+            }
         }
+
+
+        binding.cancelButton.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_shoeDetailFragment_to_shoeListFragment)
+        }
+
         return binding.root
     }
 }

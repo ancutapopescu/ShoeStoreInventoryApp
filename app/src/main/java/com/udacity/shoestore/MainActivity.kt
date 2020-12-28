@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
 import com.udacity.shoestore.databinding.ActivityMainBinding
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.models.ShoeListViewModel
@@ -15,14 +16,14 @@ import timber.log.Timber
 class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
-    private lateinit var shoeListViewModel: ShoeListViewModel
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        val navController = this.findNavController((R.id.myNavHostFragment))
+        navController = this.findNavController((R.id.myNavHostFragment))
         setSupportActionBar(binding.toolbar)
         NavigationUI.setupWithNavController(binding.toolbar, navController)
         appBarConfiguration = AppBarConfiguration(navController.graph)

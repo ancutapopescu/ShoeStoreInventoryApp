@@ -31,13 +31,13 @@
             android:layout_height="wrap_content"
             android:text="@{shoe.company}" />
 
-        <!--<TextView
+        <TextView
             android:id="@+id/sizeItemTextView"
             style="@style/sizeTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@{Double.toString(shoe.size)}"
-             />-->
+             />
 
         <TextView
             android:id="@+id/descriptionItemTextView"
