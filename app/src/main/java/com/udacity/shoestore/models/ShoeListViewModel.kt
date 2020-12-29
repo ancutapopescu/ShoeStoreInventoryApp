@@ -42,13 +42,16 @@ class ShoeListViewModel : ViewModel() {
            }
 
 
-    fun addShoe() {
+    fun addShoe(v:View, shoe: Shoe) {
         shoesList.add(shoe)
         _shoeData.value = shoesList
         _shoeSaved.value = true
+        navigateUp(v)
     }
 
-
+    fun navigateUp(v: View){
+        v.findNavController().navigateUp()
+    }
 
 
     fun onShoeSaved() {

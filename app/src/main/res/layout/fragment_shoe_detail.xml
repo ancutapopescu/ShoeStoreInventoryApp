@@ -6,6 +6,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
 
         <variable
             name="shoeViewModel"
@@ -141,7 +144,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_16sp"
             android:text="@string/saveButton"
-            android:onClick="@{() -> shoeViewModel.addShoe()}"
+            android:onClick="@{(v) -> shoeViewModel.addShoe(v,shoe)}"
             app:layout_constraintBaseline_toBaselineOf="@+id/cancelButton"
             app:layout_constraintEnd_toStartOf="@+id/cancelButton"
             app:layout_constraintHorizontal_bias="0.5"
