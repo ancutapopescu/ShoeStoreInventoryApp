@@ -31,14 +31,19 @@ class ShoeDetailFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-       //return inflater.inflate(R.layout.fragment_shoe_detail, container, false)
-        /*val binding: FragmentShoeDetailBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_detail, container, false)
-        binding.lifecycleOwner = this
-        binding.shoeViewModel = viewModel*/
+
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_detail, container, false)
+
+        //First review suggestion: You can use Kotlin scope functions to write it in more concise way.
+        /*binding.shoe = Shoe("", 0.0, "", "", mutableListOf())
         binding.shoeViewModel = shoeListViewModel
-        binding.lifecycleOwner = this
+        binding.lifecycleOwner = this*/
+
+        with(binding){
+            shoe = Shoe("", 0.0, "", "", mutableListOf())
+            shoeViewModel = shoeListViewModel
+            lifecycleOwner = this@ShoeDetailFragment
+        }
 
         shoeListViewModel.shoeSaved.observe(viewLifecycleOwner) {   isShoeSaved ->
 /* When we have new data, we will navigate back using the navigateUp() method and since ViewModel is shared, the newly added data will be automatically observed and displayed.
@@ -49,9 +54,13 @@ class ShoeDetailFragment : Fragment() {
             }
         }
 
+        //Second review
+        /*binding.cancelButton.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_shoeDetailFragment_to_shoeListFragment)
+        }*/
 
         binding.cancelButton.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_shoeDetailFragment_to_shoeListFragment)
+            view.findNavController().popBackStack()
         }
 
         return binding.root

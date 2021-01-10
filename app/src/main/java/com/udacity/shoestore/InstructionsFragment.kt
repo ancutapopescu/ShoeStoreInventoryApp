@@ -14,7 +14,9 @@ class InstructionsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-       val binding: FragmentInstructionsBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_instructions, container, false)
+        //First review suggestion: You can initialize the binding in more concise way
+       /*val binding: FragmentInstructionsBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_instructions, container, false)*/
+        val binding = FragmentInstructionsBinding.inflate(inflater, container, false)
         binding.seeDealsButton.setOnClickListener { view:View ->
             Navigation.findNavController(view).navigate(R.id.action_instructionsFragment_to_shoeListFragment)
         }

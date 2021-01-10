@@ -36,7 +36,7 @@
             style="@style/sizeTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{Double.toString(shoe.size)}"
+            android:text="@{`` + shoe.size}"
              />
 
         <TextView
